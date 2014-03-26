@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cintia's 3D Carousel</title>
+    <style>
+        .container {
+            width: 210px;
+            height: 140px;
+            position: relative;
+            margin: auto;
+            -webkit-perspective: 1000px;
+            -moz-perspective: 1000px;
+            perspective: 1000px;
+        }
+        #carousel {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: translateZ( -288px );
+            -moz-transform: translateZ( -288px );
+            -o-transform: translateZ( -288px );
+            transform: translateZ( -288px );
+            -webkit-transition: -webkit-transform 1s;
+            -moz-transition: -moz-transform 1s;
+            -o-transition: -o-transform 1s;
+            transition: transform 1s;
+
+        }
+        #carousel li {
+            display: block;
+            position: absolute;
+            width: 186px;
+            height: 116px;
+            left: 10px;
+            top: 10px;
+            border: 2px solid black;
+        }
+        #carousel li img {
+            width: 100%;
+        }
+        #carousel li:nth-child(1) {
+            -webkit-transform: rotateY(0deg) translateZ( 288px );
+            -moz-transform: rotateY(0deg) translateZ( 288px );
+            -ms-transform: rotateY(0deg) translateZ( 288px );
+            -o-transform: rotateY(0deg) translateZ( 288px );
+            transform: rotateY(0deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(2) {
+            -webkit-transform: rotateY(40deg) translateZ( 288px );
+            -moz-transform: rotateY(40deg) translateZ( 288px );
+            -ms-transform: rotateY(40deg) translateZ( 288px );
+            -o-transform: rotateY(40deg) translateZ( 288px );
+            transform: rotateY(40deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(3) {
+            -webkit-transform: rotateY(80deg) translateZ( 288px );
+            -moz-transform: rotateY(80deg) translateZ( 288px );
+            -ms-transform: rotateY(80deg) translateZ( 288px );
+            -o-transform: rotateY(80deg) translateZ( 288px );
+            transform: rotateY(80deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(4) {
+            -webkit-transform: rotateY(120deg) translateZ( 288px );
+            -moz-transform: rotateY(120deg) translateZ( 288px );
+            -ms-transform: rotateY(120deg) translateZ( 288px );
+            -o-transform: rotateY(120deg) translateZ( 288px );
+            transform: rotateY(120deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(5) {
+            -webkit-transform: rotateY(160deg) translateZ( 288px );
+            -moz-transform: rotateY(160deg) translateZ( 288px );
+            -ms-transform: rotateY(160deg) translateZ( 288px );
+            -o-transform: rotateY(160deg) translateZ( 288px );
+            transform: rotateY(160deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(6) {
+            -webkit-transform: rotateY(200deg) translateZ( 288px );
+            -moz-transform: rotateY(200deg) translateZ( 288px );
+            -ms-transform: rotateY(200deg) translateZ( 288px );
+            -o-transform: rotateY(200deg) translateZ( 288px );
+            transform: rotateY(200deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(7) {
+            -webkit-transform: rotateY(240deg) translateZ( 288px );
+            -moz-transform: rotateY(240deg) translateZ( 288px );
+            -ms-transform: rotateY(240deg) translateZ( 288px );
+            -o-transform: rotateY(240deg) translateZ( 288px );
+            transform: rotateY(240deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(8) {
+            -webkit-transform: rotateY(280deg) translateZ( 288px );
+            -moz-transform: rotateY(280deg) translateZ( 288px );
+            -ms-transform: rotateY(280deg) translateZ( 288px );
+            -o-transform: rotateY(280deg) translateZ( 288px );
+            transform: rotateY(280deg) translateZ( 288px );
+        }
+        #carousel li:nth-child(9) {
+            -webkit-transform: rotateY(320deg) translateZ( 288px );
+            -moz-transform: rotateY(320deg) translateZ( 288px );
+            -ms-transform: rotateY(320deg) translateZ( 288px );
+            -o-transform: rotateY(320deg) translateZ( 288px );
+            transform: rotateY(320deg) translateZ( 288px );
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul id="carousel">
+        <li><img src="images/hellokitty01.png"></li>
+        <li><img src="images/hellokitty02.png"></li>
+        <li><img src="images/hellokitty03.png"></li>
+        <li><img src="images/hellokitty04.png"></li>
+        <li><img src="images/hellokitty05.png"></li>
+        <li><img src="images/hellokitty06.png"></li>
+        <li><img src="images/hellokitty07.png"></li>
+        <li><img src="images/hellokitty08.png"></li>
+        <li><img src="images/hellokitty09.png"></li>
+    </ul>
+</div>
+<button id="previous" class="control" data-increment="-1">Previous</button>
+<button id="next" class="control" data-increment="1">Next</button>
+<script src="js/carousel.js"></script>
+<script>
+    window.carousel.init();
+</script>
+</body>
+</html>
